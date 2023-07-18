@@ -13,13 +13,20 @@
     }
 }
 .order-details{
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: white;
 }
 .order-table{
   margin-top: 50px;
   width: 80%;
   margin-left: 5%;
+}
+.kitchen-table{
+  margin: 20px 20px 20px 20px;
+    width: 95%!important;
 }
  .table-button{
     background-color: #3063a7!important;

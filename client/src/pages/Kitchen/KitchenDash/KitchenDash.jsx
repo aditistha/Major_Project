@@ -105,13 +105,13 @@ const KitchenDash = () => {
                   component={Paper}
                   style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
                 >
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table" className="kitchen-table">
                     <TableHead>
                       <TableRow>
-                        <TableCell>Ordered item</TableCell>
-                        <TableCell align="left">Quantity</TableCell>
-                        <TableCell align="left">Status</TableCell>
-                        <TableCell align="left">Action</TableCell>
+                        <TableCell className="border">Ordered item</TableCell>
+                        <TableCell align="left" className="border">Quantity</TableCell>
+                        <TableCell align="left" className="border">Status</TableCell>
+                        <TableCell align="left" className="border">Action</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody style={{ color: "white" }}>
@@ -122,14 +122,14 @@ const KitchenDash = () => {
                             "&:last-child td, &:last-child th": { border: 0 },
                           }}
                         >
-                          <TableCell component="th" scope="row">
+                          <TableCell component="th" scope="row" className="border">
                             {item.title}
                           </TableCell>
-                          <TableCell align="left">{item.amount}</TableCell>
-                          <TableCell align="left">
+                          <TableCell align="left" className="border">{item.amount}</TableCell>
+                          <TableCell align="left" className="border">
                             <span className="status">pending</span>
                           </TableCell>
-                          <TableCell align="left">
+                          <TableCell align="left" className="border">
                             <Button
                               className="bg-success"
                               style={{ border: "none" }}

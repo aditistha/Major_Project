@@ -1,10 +1,5 @@
 .kitchendashboard {
-background: linear-gradient(
-    106.37deg,
-    #bcffff 29.63%,
-    #d2cfff 51.55%,
-    #c6cdf3 90.85%
-  );
+background-color: #9bbcda;
   height: 100vh;
   display: flex;
   align-items: center;

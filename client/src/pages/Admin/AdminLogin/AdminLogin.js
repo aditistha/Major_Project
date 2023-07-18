@@ -79,12 +79,12 @@ function AdminLogin({ setToken }) {
                     <div className='mb-3'>
                         <label htmlFor="email"><strong>Email</strong></label>
                         <input type="email" placeholder='Enter Email' name='name'
-                            onChange={e => setEmail(e.target.value)} className="form-control rounded-0" required />
+                            onChange={e => setEmail(e.target.value)}  required />
                     </div>
                     <div className='mb-3'>
                         <label htmlFor="password"><strong>Password</strong></label>
                         <input type="password" placeholder='Enter Password' name='name'
-                             onChange={e => setPassword(e.target.value)} className="form-control rounded-0" required />
+                             onChange={e => setPassword(e.target.value)} className="passwordfield" required />
                     </div >
                     {error && <p className="error">{error}</p>}
                     <div className='forget text-primary'>
@@ -118,7 +118,6 @@ function AdminLogin({ setToken }) {
                                     name="reset-email"
                                     value={resetEmail.email}
                                     onChange={handleResetEmailChange}
-                                    className="form-control rounded-0"
                                     required
                                 />
                             </div>

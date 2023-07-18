@@ -1,5 +1,5 @@
 import React from 'react'
-import './KitchenLogin.css'
+import './CashierLogin.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'

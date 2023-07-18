@@ -94,8 +94,8 @@ function KitchenLogin({ setToken }) {
     });
 };
     return (
-        <div className='login d-flex justify-content-center align-items-center vh-100'>
-            <div className='glass p-3 rounded w-45'>
+        <div className=' d-flex justify-content-center align-items-center vh-100'>
+            <div className=' p-3 rounded w-45'>
                 <h2>Sign In</h2>
                 <form className='mt-4' onSubmit={handleSubmit}>
                     <div className='mb-3'>

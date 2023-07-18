@@ -138,7 +138,7 @@ const CashierDash = () => {
               Table {order.tableNumber}
             </Button>
             {selectedOrder === order && (
-              <div className="order-details">
+              <div className="cashorder-details">
                 <h4>Order Code: {order.code}</h4>
                 <TableContainer
                   component={Paper}

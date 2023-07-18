@@ -1,8 +1,8 @@
-.login{
+.kitchenlogin{
     background-color: rgba(27, 4, 82, 0.596);
 }
 
-.glass{
+.kitchenglass{
     backdrop-filter: blur(20px) saturate(180%);
     background-color: rgba(222, 209, 238, 0.918);
     border-radius: 12px;
