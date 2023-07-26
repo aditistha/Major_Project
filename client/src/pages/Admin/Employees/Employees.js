@@ -197,7 +197,7 @@ export default function BasicTable() {
 
   return (
     <>
-      <div className="Table">
+      <div className="adminTable">
         <h3>Employees</h3>
         <div className="registerbtn mb-5 mt-5">
           <Button

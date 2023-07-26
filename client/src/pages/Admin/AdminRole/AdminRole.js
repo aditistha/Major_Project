@@ -133,7 +133,7 @@ function AdminRole() {
   };
 
   return (
-    <div className="Table ">
+    <div className="adminTable ">
       <h3 className="mb-5">Roles</h3>
 
       <form onSubmit={handleSubmit}>

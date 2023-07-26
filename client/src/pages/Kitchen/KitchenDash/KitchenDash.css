@@ -21,6 +21,9 @@
   width: 70%;
   margin-left: 5%;
 }
+.kitchenorderrow{
+  background-color: #a6cbfc;
+}
  .table-button{
     background-color: #3063a7!important;
     box-shadow: inset 6px 6px 8px #456997, inset -6px -6px 8px #1d5399!important;
@@ -84,7 +87,15 @@ justify-content: space-between;
     }
 }
 
-
+@media screen and (max-width: 480px)
+{
+  .table-button{
+     
+    padding: 10px 10px 10px 10px!important;
+   
+   font-size: 15px!important;
+}
+}
 
 
 

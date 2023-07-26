@@ -22,16 +22,22 @@ function AdminLogin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await loginUser({ email, password })
-      .then((response) => {
-        console.log("here", response);
+  
+    try {
+      const response = await loginUser({ email, password });
+      if (response.error) {
+        if (response.error === "INVALID_EMAIL") {
+          setError("Email is incorrect");
+        } else if (response.error === "INVALID_PASSWORD") {
+          setError("Password is incorrect");
+        }
+      } else {
         setToken(response.data);
-
         refreshPage();
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   // const [values, setValues] = useState({

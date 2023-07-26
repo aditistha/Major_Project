@@ -12,7 +12,7 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 body{
-  background-color: #f3ecc7!important;
+  background-color: #eeede7!important;
 }
 .App {
   /* padding: 0.5rem 3.5rem; */
@@ -127,6 +127,9 @@ font-weight: bold;
   .cart-overlay {
   margin-right: 50px;
   }
+  .AppGlass {
+    grid: none;
+   }
 }
 @media screen and (max-width: 801px) {
   .cart-popup {
@@ -147,6 +150,9 @@ font-weight: bold;
     max-width: 650px;
     width: 90%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .AppGlass {
+   grid: none;
   }
 }
 

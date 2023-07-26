@@ -172,6 +172,13 @@ article{
   background-color: #af4c4c;
  
 }
+.thank-you {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
 @media screen and (max-width: 810px) {
   .cart_img {
     display: flex;
@@ -216,5 +223,12 @@ article{
   border-bottom: 2px solid rgb(114, 114, 114);
   padding-bottom: 5px;
 }
+}
+@media screen and (max-width: 633px) {
+  .cart_img {
+    display: flex;
+    width: 150px;
+}
+
 }
 /* Rest of the CSS code */

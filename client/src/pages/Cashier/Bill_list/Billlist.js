@@ -66,7 +66,7 @@ const Billlist = () => {
   },[])
 
   return (
-    <div>
+    <div className="billlist">
       <div className="title-icon mb-5 mt-5 dflex">
         <h3>Payment List</h3>
       </div>

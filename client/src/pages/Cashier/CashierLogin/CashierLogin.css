@@ -1,22 +1,23 @@
-/* .login{
-    background-color: rgba(27, 4, 82, 0.596);
+.cashierlogin{
+    background-color: rgba(4, 82, 43, 0.596);
 }
 
-.glass{
+.cashierglass{
     backdrop-filter: blur(20px) saturate(180%);
-    background-color: rgba(222, 209, 238, 0.918);
+    background-color: rgba(209, 238, 215, 0.918);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, .25);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    width: 30%;
+    width: 35%;
 }
 .btn1{
    background-color: rgba(57, 41, 148, 0.705) !important;
    color: aliceblue !important;
    margin-left: 25%;
 }
- .btn3{
-    background-color: rgba(57, 41, 148, 0.705) !important;
+ .cashbtn3{
+   background: linear-gradient(145deg, #3c815f, #448f48);
+   box-shadow: inset 4px 4px 8px #68c5a1, inset -4px -4px 8px #35633f;
     color: aliceblue !important;
     width: 20%;
  }
@@ -33,9 +34,9 @@
     align-items: center;
     z-index: 9999;
  }
- .popup-content{
+ .cashpopup-content{
     position: relative;
-    background-color: #b396d9;
+  background-color: rgba(209, 238, 215, 0.918);
     padding: 20px;
     border-radius: 4px;
     transform: translate(-50%, -50%);
@@ -51,4 +52,4 @@
     position: fixed;
     left: 88%;
     top: 7px;
- } */
+ }

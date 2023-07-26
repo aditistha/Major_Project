@@ -2,8 +2,14 @@
     margin-top: 50px;
     width: 95%;
     margin-left: 2%;
+    
 }
-
+.adminTable{
+  margin-top: 50px;
+  width: 95%;
+  margin-left: 2%;
+  
+}
 .add{
   width: 10%;
   margin-left: 3%;
@@ -72,6 +78,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 40rem;
+    }
+    .adminTable {
+      margin-top: 5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+     margin-left:15rem;
       width: 40rem;
     }
   }

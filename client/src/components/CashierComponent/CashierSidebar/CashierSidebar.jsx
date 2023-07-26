@@ -21,18 +21,18 @@ const CashierSidebar = () => {
       left : '0'
     },
     false:{
-      left : '-60%'
+      left : '-100%'
     }
   }
   console.log(window.innerWidth)
   return (
     <>
-      <div className="bars" style={expanded?{left: '60%'}:{left: '5%'}} onClick={()=>setExpaned(!expanded)}>
+      <div className="bars" style={expanded?{left: '32%'}:{left: '5%'}} onClick={()=>setExpaned(!expanded)}>
         <UilBars />
       </div>
     <motion.div className='Cashiersidebar'
     variants={sidebarVariants}
-    animate={window.innerWidth<=768?`${expanded}`:''}
+    animate={window.innerWidth<=768 || window.innerWidth <= 1200?`${expanded}`:''}
     >
       {/* logo */}
       <div className="cashierlogo">
@@ -60,7 +60,7 @@ const CashierSidebar = () => {
           );
         })}
         {/* signoutIcon */}
-        <div className="menuItem-logout " >
+        <div className="cashmenuItem-logout " >
           <UilSignOutAlt onClick={handleLogout}/> Logout
         </div>
       </div>

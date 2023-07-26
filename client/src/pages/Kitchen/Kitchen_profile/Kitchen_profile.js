@@ -216,7 +216,7 @@ const Kitchen_profile = () => {
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100">
-      <div className="glass p-3 rounded w-50">
+      <div className="cashproglass p-3 rounded ">
         <div className="profile_img text-center p-4">
           <div className="flex flex-column justify-content-center align-items-center ">
             <img
@@ -227,12 +227,13 @@ const Kitchen_profile = () => {
                 objectFit: "cover",
                 border: "4px solid green",
               }}
+              className="proimg"
               onClick={openDialog}
               src={profileFinal || img}
               alt=""
             />
             <br />
-            <label htmlFor="" className="mt-3 fw-bold fs-2">
+            <label htmlFor="" className="proname mt-3 fw-bold ">
             {`${data.firstname} ${data.lastname}`}
             </label>
             {showDialog && (
@@ -278,7 +279,7 @@ const Kitchen_profile = () => {
           </div>
         </div>
         <form>
-          <div className="mb-3 d-flex justify-content-around">
+          <div className="prodetails d-flex justify-content-around">
             <label htmlFor="name">
               <strong>First name</strong>: {data.firstname}
             </label>
@@ -287,7 +288,7 @@ const Kitchen_profile = () => {
               <strong>Last name</strong>: {data.lastname}
             </label>
           </div>
-          <div className="mb-3 d-flex justify-content-around">
+          <div className="prodetails d-flex justify-content-around">
             <label htmlFor="email">
               <strong>Email:</strong>
               {data.email}
@@ -296,7 +297,7 @@ const Kitchen_profile = () => {
               <strong>Address:</strong> {data.address}
             </label>
           </div>
-          <div className="mb-3 d-flex justify-content-around">
+          <div className="prodetails  d-flex justify-content-around">
 
             <label htmlFor="phone">
               <strong>Phone number:</strong> {data.phone}
@@ -376,7 +377,7 @@ const Kitchen_profile = () => {
                   <div className="mb-3">
                     <label htmlFor="name">Email</label>
                     <input
-                      type="email"
+                      type="text"
                       placeholder="Enter email"
                       name="email"
                       onChange={(e) =>

@@ -79,7 +79,20 @@
   background: #3063a7;
   margin-right: calc(0rem - 2px);
 }
-
+.kitchenmenuItem-logout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+  margin-left: 2rem;
+  margin-top: 20rem;
+  position: relative;
+  transition: all 300ms ease;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  color: black;
+ 
+}
 
 /* Tablets */
 @media screen and (max-width: 1200px) {
@@ -95,8 +108,6 @@
   .sidebar{
     position: fixed;
     z-index: 9;
-    background: #ffe0e0;
-    width: 55%;
     padding-right: 1rem;
     height: 100%;
   }
@@ -118,7 +129,7 @@
     background:#ffe0e0;
     padding:10px;
     border-radius: 10px;
-    z-index: 9;
+   
   }
   .close{
     left: -60%;

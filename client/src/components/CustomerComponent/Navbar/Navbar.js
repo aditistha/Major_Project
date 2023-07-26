@@ -164,7 +164,7 @@ const Navbar = ({ size, handleClick, toggleCart }) => {
 
   return (
     <>
-      <header className="site-header">
+      <header class="site-header">
         <nav className="navbar">
           <div className="navbar-container">
             <div className="navbar-logo">
@@ -310,16 +310,18 @@ const Navbar = ({ size, handleClick, toggleCart }) => {
                     >
                       <FaAngleLeft />
                     </button>
+                    <div className="slider-wrapper">
                     <ul className="filters">
                       <div className="slider" ref={sliderRef}>
                         {menuCategories.map((dataItem, category_name) => (
-                          <li className={`filter ${filterCategory === dataItem.category_name ? 'active filactive ' : '' }`} onClick={() => filterItem(dataItem.category_id)} >
+                          <li className={` filter${filterCategory === dataItem.category_id ? 'active  ' : '' }`} onClick={() => filterItem(dataItem.category_id)} >
                             <img src={menu1} alt="" />
                             {dataItem.category_name}
                           </li>
                         ))}
                       </div>
                     </ul>
+                    </div>
                     <button
                       className="slider-button right"
                       onClick={handleSliderRight}

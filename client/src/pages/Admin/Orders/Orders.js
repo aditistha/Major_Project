@@ -60,7 +60,7 @@ export default function BasicTable() {
   };
 
   return (
-    <div className="Table">
+    <div className="adminTable">
       <h3>Orders</h3>
       <TableContainer
         component={Paper}

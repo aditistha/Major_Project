@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./CashierDash.css";
 import { FaBell } from "react-icons/fa";
 import io from "socket.io-client";
+import { updateOrderStatus } from "../../../api/userAction";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -24,40 +25,40 @@ const CashierDash = () => {
   const [showInvoice, setShowInvoice] = useState(false);
   const [showQRCode, setShowQRCode] = useState(false);
   const [transactionCode, setTransactionCode] = useState(""); // New state for transaction code input field
+  const [notificationOrder, setNotificationOrder] = useState(null);
 
-  console.log("rfnkernj---------", selectedOrder);
+
+  
+
+  const newOrderCount = orders.filter(order => !order.isRead).length;
 
   useEffect(() => {
     const socket = io("http://localhost:8000");
-
+  
     socket.on("connect", () => {
       console.log("Connected to server");
     });
-
+  
     socket.on("disconnect", () => {
       console.log("Disconnected from server");
     });
-
-    socket.on("newOrder", (order) => {
-      // console.log("Received new order:", order);
-      setOrders((prevOrders) => [order, ...prevOrders]);
+  
+    // Listen for the "orderDoneNotification" event from the server
+    socket.on("neworderDoneNotification", (order) => {
+      console.log("Received new order done notification:", order);
+      // Find the order in the state and update its cart
+      setOrders((prevOrders) =>
+        prevOrders.map((prevOrder) =>
+          prevOrder.code === order.code ? { ...prevOrder, cart: order.cart } : prevOrder
+        )
+      );
     });
+
 
     return () => {
       socket.disconnect();
     };
   }, []);
-
-  useEffect(() => {
-    const storedOrders = localStorage.getItem("cashierOrders");
-    if (storedOrders) {
-      setOrders(JSON.parse(storedOrders));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("cashierOrders", JSON.stringify(orders));
-  }, [orders]);
 
   const handleOrderToggle = (order) => {
     setSelectedOrder((prevOrder) => (prevOrder === order ? null : order));
@@ -151,26 +152,26 @@ const CashierDash = () => {
         <div className="bell-icons">
           <div className="bell-icon">
             <FaBell style={{ fontSize: "50px" }} />
-            <span>{orders.length}</span>
+            <span>{newOrderCount}</span>
           </div>
         </div>
       </div>
-
-      <h3>Recent Orders</h3>
+    
+      <h3 className="cashrecent">Recent Orders</h3>
 
       <div className="order-table">
         {orders.map((order) => (
           <div key={order.code}>
             <Button
               variant="secondary"
-              className="table-button"
+              className="cashiertable-button"
               onClick={() => handleOrderToggle(order)}
             >
               Table {order.table_number[0]}
             </Button>
             {selectedOrder === order && (
               <div className="order-details">
-                <h4>Order Code: {order.code}</h4>
+                
                 <TableContainer
                   component={Paper}
                   style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
@@ -181,7 +182,7 @@ const CashierDash = () => {
                     className="cash-table"
                   >
                     <TableHead>
-                      <TableRow>
+                      <TableRow className="cashorderrow">
                         <TableCell className="border">SN</TableCell>
                         <TableCell className="border">Ordered item</TableCell>
                         <TableCell align="left" className="border">Quantity</TableCell>
@@ -317,7 +318,7 @@ const CashierDash = () => {
           </div>
         </div>
       )}
-
+ 
       {/* QR Code Popup */}
       {showQRCode && (
         <div className="QRCodePopup">

@@ -279,7 +279,7 @@ export default function Menu() {
   };
 
   return (
-    <div className="Table">
+    <div className="adminTable">
       <h3>Menu </h3>
       <div className="registerbtn mb-5 mt-5">
         <Button variant="contained" color="primary" onClick={handleOpen}>
